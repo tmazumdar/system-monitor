@@ -1,10 +1,10 @@
 # system-monitor
 
 # clone 
-> \>git clone https://github.com/tmazumdar/system-monitor.git system-monitor
+> git clone https://github.com/tmazumdar/system-monitor.git system-monitor
 
 # change directory
-> \>cd system-monitor
+> cd system-monitor
 
 # run server
 > ..\system-monitor> cd server  
