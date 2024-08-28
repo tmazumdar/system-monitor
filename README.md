@@ -48,6 +48,7 @@ T:\code\system-monitor\client>npm run dev
 
 # guides
 https://samhobbs.co.uk/2014/02/how-install-wordpress-raspberry-pi
+
 https://www.nano-editor.org/dist/latest/cheatsheet.html
 
 # tmux commands
