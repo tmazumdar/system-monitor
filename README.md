@@ -1,6 +1,9 @@
 # system-monitor
 This is a system monitor webpage for monitoring processes remotely on a computer
 
+![system-monitor-s1](https://github.com/user-attachments/assets/a9553c5d-9e17-4a12-b5ca-1ee31fcb1590)
+
+
 # clone 
 > git clone https://github.com/tmazumdar/system-monitor.git system-monitor
 
