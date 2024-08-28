@@ -1,4 +1,5 @@
 # system-monitor
+This is a system monitor webpage for monitoring processes remotely on a computer
 
 # clone 
 > git clone https://github.com/tmazumdar/system-monitor.git system-monitor
@@ -44,3 +45,22 @@ T:\code\system-monitor\client>npm run dev
 ├─ ✔︎ 1 theme added             https://daisyui.com/docs/themes
 ╰─ ★ Star daisyUI on GitHub     https://github.com/saadeghi/daisyui
 ```
+
+# guides
+https://samhobbs.co.uk/2014/02/how-install-wordpress-raspberry-pi
+
+# tmux commands
+Create new session
+> tmux
+
+Detach session
+> ctrl + b, d
+
+Attach session
+> ctrl + b, a
+
+Switch session
+> ctrl + b, s
+
+Kill session
+> x, y
