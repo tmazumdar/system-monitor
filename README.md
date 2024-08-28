@@ -1,7 +1,7 @@
 # system-monitor
 This is a system monitor webpage for monitoring processes remotely on a computer
 
-![system-monitor-s1](https://github.com/user-attachments/assets/a9553c5d-9e17-4a12-b5ca-1ee31fcb1590)
+![image](https://github.com/user-attachments/assets/8800375e-ea9c-4aac-a284-3d5664f7ece4)
 
 
 # clone 
