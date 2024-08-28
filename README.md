@@ -48,6 +48,7 @@ T:\code\system-monitor\client>npm run dev
 
 # guides
 https://samhobbs.co.uk/2014/02/how-install-wordpress-raspberry-pi
+https://www.nano-editor.org/dist/latest/cheatsheet.html
 
 # tmux commands
 Create new session
@@ -64,3 +65,15 @@ Switch session
 
 Kill session
 > x, y
+
+# nano commands
+Open file with sudo
+> sudo nano /etc/hosts
+
+Go to line number and character number
+> ctrl + _ (ctrl + shift + _)
+
+Save and Exit
+> ctrl + s, ctrl + x
+
+
