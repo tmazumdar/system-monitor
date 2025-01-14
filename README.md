@@ -52,7 +52,21 @@ T:\code\system-monitor\client>npm run dev
 # guides
 https://samhobbs.co.uk/2014/02/how-install-wordpress-raspberry-pi
 
+https://fireship.io/lessons/host-website-raspberry-pi/
+
 https://www.nano-editor.org/dist/latest/cheatsheet.html
+
+# ref
+
+DNS Lookup occurs behind the scenes. 
+
+https://www.cloudflare.com/learning/dns/what-is-dns/
+
+In order to host a website on an IOT device, it needs a static External IP.
+The IP needs to be registed with a DNS service so that it can be looked up externally.
+
+![image](https://github.com/user-attachments/assets/595e05ef-6d58-46f3-8031-4514255d7c3a)
+
 
 # tmux commands
 Create new session
