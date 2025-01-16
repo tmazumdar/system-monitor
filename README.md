@@ -50,11 +50,14 @@ T:\code\system-monitor\client>npm run dev
 ```
 
 # guides
+
 https://samhobbs.co.uk/2014/02/how-install-wordpress-raspberry-pi
 
 https://fireship.io/lessons/host-website-raspberry-pi/
 
 https://www.nano-editor.org/dist/latest/cheatsheet.html
+
+https://github.com/ddclient/ddclient/blob/main/ddclient.conf.in
 
 # ref
 
@@ -67,6 +70,15 @@ The IP needs to be registed with a DNS service so that it can be looked up exter
 
 ![image](https://github.com/user-attachments/assets/595e05ef-6d58-46f3-8031-4514255d7c3a)
 
+# prerequisites
+1. nginx - install, to configure: add server block to nginx.conf (`sudo nano /etc/nginx/sites-enabled/default`)
+2. add port forwarding to router config for ports 80, 443
+3. ddclient - checks dyndns (http://checkip.dyndns.org/) to get current IP and updates to cloudflare server
+using API Token (privileges: Zone.DNS.Edit, Zone.Zone.Read). Configured to run as service every 600s (`sudo nano /etc/ddclient.conf`)
+4. certbot - install, new cert `sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com`, auto-renew `sudo certbot renew --dry-run`
+5. cloudflare - DNS A Records (yourdomain.com, www.yourdomain.com) with external IP, set SSL/TLS to Full(strict)
+6. ufw - linux uncomplicated firewall - ensure nginx is allowed `sudo ufw allow 'Nginx Full'`
+7. timeshift - run and retain atleast 1 backup of server on separate disk/usb drive
 
 # tmux commands
 Create new session
