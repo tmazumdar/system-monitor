@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import system from "./routes/system.js";
+import api from "./routes/api.js";
 
 // reference:
 // https://www.mongodb.com/resources/languages/mern-stack-tutorial
@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/system", system);
+app.use("/api", api);
 
 // start the Express server
 app.listen(PORT, () => {

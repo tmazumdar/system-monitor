@@ -9,7 +9,7 @@ export default function ProcessCard() {
     const [sortByDesc, setSortByDesc] = useState(true);
 
     var loadProcesses = async () => {
-        const response = await fetch(`http://localhost:5050/system/processes/` + (detailed ? `detailed/` : ``));
+        const response = await fetch(`/api/processes/` + (detailed ? `detailed/` : ``));
         if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
             console.error(message);
