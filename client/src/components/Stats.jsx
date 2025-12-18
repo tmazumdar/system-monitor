@@ -13,7 +13,7 @@ export default function Stats() {
     const [totalMem, setTotalMem] = useState(0);
 
     async function loadStats() {
-        const response = await fetch(`/api`);
+        const response = await fetch(`/system/api`);
         if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
             console.error(message);
