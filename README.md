@@ -77,13 +77,13 @@ Save and Exit
 > ctrl + s, ctrl + x
 
 # nginx configuration
-`/etc/nginx/sites-available/nahar`
+`/etc/nginx/sites-available/*****`
 
 ```
 server {
-        server_name nahar.cc www.nahar.cc;
+        server_name nahar.cc www.*****.**;
 
-        root /var/www/nahar;
+        root /var/www/*****;
         index index.html;
 
         location / {
@@ -91,13 +91,13 @@ server {
         }
 
         location /system/ {
-                alias /var/www/nahar/system/;
+                alias /var/www/*****/system/;
                 index index.html;
                 try_files $uri $uri/ /system/index.html;
         }
 
         location /system/api/ {
-                proxy_pass http://localhost:5050/api/;
+                proxy_pass http://*************/api/;
                 proxy_http_version 1.1;
 
                 proxy_set_header Upgrade $http_upgrade;
@@ -111,25 +111,25 @@ server {
 
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/nahar.cc/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/nahar.cc/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/*****.**/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/*****.**/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 
 server {
-    if ($host = www.nahar.cc) {
+    if ($host = www.*****.**) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-    if ($host = nahar.cc) {
+    if ($host = *****.**) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
         listen 80;
         listen [::]:80;
 
-        server_name nahar.cc www.nahar.cc;
+        server_name *****.** www.*****.**;
     return 404; # managed by Certbot
 }
 ```
