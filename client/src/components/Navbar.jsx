@@ -8,6 +8,7 @@ export default function Navbar() {
         <NavLink to="/">
           <img className="h-10 inline" src={rpiLogo}></img>
         </NavLink>
+        <p>Referred from: <b>{document.referrer || "Direct visit"}</b></p>
       </nav>
     </div>
   );

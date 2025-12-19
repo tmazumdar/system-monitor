@@ -7,7 +7,7 @@ let timer;
 
 export default function Stats() {
     const [CPU, setCPU] = useState(0);
-    const [l, setLoad] = useState(0);
+    const [percentLoad, setLoad] = useState(0);
     const [percentMem, setMem] = useState(0);
     const [freeMem, setFreeMem] = useState(0);
     const [totalMem, setTotalMem] = useState(0);
@@ -26,18 +26,18 @@ export default function Stats() {
 
     function setStats(data) {
         const {cpu, load, freeRAM, totalRAM} = data;
-
-        setCPU(cpu);
-        setLoad(load);
         let ramPercent = 100*((totalRAM - freeRAM) / totalRAM)
+        let loadPercent = load.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+        setCPU(cpu);
+        setLoad(loadPercent.toFixed(2));
         setMem(ramPercent.toFixed(2));
         setFreeMem(freeRAM);
         setTotalMem(totalRAM);
     };
 
-    // This method fetches the system data from the backend.
     useEffect(() => {
         async function getStats() {
+            // This method fetches the system data from the backend.
             var data = await loadStats();
             
             if (!!data) {
@@ -58,9 +58,9 @@ export default function Stats() {
 
 
     return (
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <CPUCard title={"CPU"} value={CPU}></CPUCard>
-            <Card title={"Load"} value={l[0]}></Card>
+            <Card title={"Load"} value={percentLoad}></Card>
             <RAMCard title={"RAM"} value={percentMem} free={freeMem} total={totalMem}></RAMCard>
         </div>
     );
