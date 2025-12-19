@@ -81,7 +81,7 @@ Save and Exit
 
 ```
 server {
-        server_name nahar.cc www.*****.**;
+        server_name *****.** www.*****.**;
 
         root /var/www/*****;
         index index.html;
